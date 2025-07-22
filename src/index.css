@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+.my-masonry-grid {
+  display: -webkit-box; /* Safari fallback */
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Fix spacing between items */
+.my-masonry-grid_column > div {
+  margin-bottom: 1rem;
+}
